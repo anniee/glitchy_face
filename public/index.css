@@ -1,3 +1,18 @@
 body {
-  background-image: url("tvglitch.jpg");
+  /*background-image: url("tvglitch.");*/
+}
+
+.makeCharacterContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+#theNose {
+  margin-left: 70px;
+}
+
+.randomizerButton {
+  width: 150px;
+  border: 2px solid green;
+  background-color: ;
 }

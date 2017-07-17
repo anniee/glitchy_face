@@ -1,17 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="glitchygifsApp">
   <head>
     <meta charset="utf-8">
     <title>glitchygifs</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bahiana|Frijole" rel="stylesheet">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- angularjs -->
+    <script src="https:////ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular-route.js"></script>
+    <!-- my stylesheet -->
     <link rel="stylesheet" type="text/css" href="index.css">
+    <!-- my js script -->
+    <script src="/script.js"></script>
+
   </head>
   <body>
-    <div id="message">
+  <div id="message">
       <h1 style="font-family: 'Frijole', cursive; font-weight: 200; font-size: 68px; margin-bottom: 0px;">glitchy gifs</h1>
   <p style="font-family: 'Bahiana', cursive; font-size: 40px; margin-left:30px; margin-top: 0px">tune in and procedurally generate your gif!</p>
-      <p style="font-size: 30px; color: greenyellow; background-color: fuchsia; font-weight: bold">Danny, dw i'm going to replace this tv with actual working code but I also need your artwork pls let's make something cool!!!!</p>
-      <img src ="../old-tv.png">
+
+  <div ng-controller="GlitchyGifsController as glitchyCtrl" class="makeCharacterContainer">
+    <img class="facePart" src="{{glitchyCtrl.character.brows}}" width="250px"/>
+    <img class="facePart" src="{{glitchyCtrl.character.eyes}}" width="250px"/>
+    <img class="facePart" id="theNose" src="{{glitchyCtrl.character.nose}}" height="100px" width="70px"/>
+    <img class="facePart" src="{{glitchyCtrl.character.mouth}}" width="250px"/>
+
+    <button class="randomizerButton" ng-click="glitchyCtrl.randomizeFace()">RANDOM FACE</button>
+  </div>
+
+
+
+
+
+
+
+      <!-- <p style="font-size: 30px; color: greenyellow; background-color: fuchsia; font-weight: bold">Danny, dw i'm going to replace this tv with actual working code but I also need your artwork pls let's make something cool!!!!</p>
+      <img src ="../old-tv.png"> -->
+
+      <!-- face component selector -->
+
+      <!-- distortion pixels -->
+
+
+      <!-- distort color -->
+
+      <!-- face movement -->
+
+
     </div>
   </body>
 </html>
